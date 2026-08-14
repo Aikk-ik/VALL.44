@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VALL.44 - Grup Community</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .vvip-container {
+            max-width: 600px;
+            margin: 80px auto;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            padding: 40px;
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+
+        .vvip-header {
+            margin-bottom: 40px;
+        }
+
+        .vvip-header .icon-large {
+            width: 80px;
+            height: 80px;
+            display: grid;
+            place-items: center;
+            border-radius: 20px;
+            color: var(--accent-vvip);
+            background: rgba(251, 191, 36, 0.15);
+            border: 1px solid rgba(251, 191, 36, 0.3);
+            margin: 0 auto 24px;
+        }
+
+        .vvip-header h1 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            font-family: 'Outfit', sans-serif;
+            letter-spacing: -0.02em;
+        }
+
+        .vvip-header p {
+            color: var(--muted);
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .vvip-steps {
+            text-align: left;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 24px;
+            padding: 32px;
+            margin-bottom: 40px;
+        }
+
+        .step-row {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 24px;
+        }
+
+        .step-row:last-child {
+            margin-bottom: 0;
+        }
+
+        .step-num {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            color: var(--text);
+            display: grid;
+            place-items: center;
+            font-weight: 700;
+            font-size: 14px;
+            margin-right: 16px;
+            flex-shrink: 0;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .step-text h3 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 4px;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .step-text p {
+            font-size: 14px;
+            color: var(--muted);
+            line-height: 1.5;
+        }
+
+        .vvip-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px 32px;
+            border-radius: 14px;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: var(--accent-vvip);
+            color: #000;
+            box-shadow: 0 8px 24px rgba(251, 191, 36, 0.2);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(251, 191, 36, 0.4);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Background decoration -->
+    <div class="background-grid"></div>
+    <div class="bg-chart">
+        <svg viewBox="0 0 1000 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 400 L 150 320 L 300 350 L 450 180 L 600 240 L 750 100 L 1000 150" stroke="rgba(0, 255, 136, 0.15)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M0 400 L 150 320 L 300 350 L 450 180 L 600 240 L 750 100 L 1000 150 L 1000 500 L 0 500 Z" fill="url(#chart-gradient)" />
+            
+            <rect x="144" y="300" width="12" height="40" rx="3" fill="rgba(0, 255, 136, 0.15)"/>
+            <line x1="150" y1="280" x2="150" y2="360" stroke="rgba(0, 255, 136, 0.3)" stroke-width="2"/>
+            
+            <rect x="294" y="320" width="12" height="30" rx="3" fill="rgba(239, 68, 68, 0.15)"/>
+            <line x1="300" y1="300" x2="300" y2="370" stroke="rgba(239, 68, 68, 0.3)" stroke-width="2"/>
+
+            <rect x="444" y="160" width="12" height="60" rx="3" fill="rgba(0, 255, 136, 0.15)"/>
+            <line x1="450" y1="120" x2="450" y2="240" stroke="rgba(0, 255, 136, 0.3)" stroke-width="2"/>
+
+            <rect x="594" y="210" width="12" height="40" rx="3" fill="rgba(239, 68, 68, 0.15)"/>
+            <line x1="600" y1="190" x2="600" y2="270" stroke="rgba(239, 68, 68, 0.3)" stroke-width="2"/>
+
+            <rect x="744" y="80" width="12" height="40" rx="3" fill="rgba(0, 255, 136, 0.15)"/>
+            <line x1="750" y1="50" x2="750" y2="140" stroke="rgba(0, 255, 136, 0.3)" stroke-width="2"/>
+            
+            <defs>
+                <linearGradient id="chart-gradient" x1="0" y1="0" x2="0" y2="500" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="rgba(0, 255, 136, 0.08)" />
+                    <stop offset="100%" stop-color="rgba(0, 255, 136, 0)" />
+                </linearGradient>
+            </defs>
+        </svg>
+    </div>
+    <div class="glow glow-one"></div>
+    <div class="glow glow-two"></div>
+    <div class="glow glow-three"></div>
+
+    <main class="page">
+        <!-- HEADER -->
+        <header class="navbar">
+            <a href="index.html" class="brand">
+                <div class="brand-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M19 12H5M12 19l-7-7 7-7"/>
+                    </svg>
+                </div>
+                <span>KEMBALI<span class="brand-dot">.</span></span>
+            </a>
+            <span class="status">
+                <span class="status-dot"></span>
+                COMMUNITY PORTAL
+            </span>
+        </header>
+
+        <section class="vvip-container" style="opacity: 0; animation: fadeUp 0.8s ease forwards 0.2s;">
+            <div class="vvip-header">
+                <div class="icon-large">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                    </svg>
+                </div>
+                <h1>Persyaratan Grup Community</h1>
+                <p>Bergabunglah dengan komunitas trader eksklusif VALL.44. Dapatkan akses sinyal harian, edukasi premium, dan dukungan penuh dari mentor kami.</p>
+            </div>
+
+            <div class="vvip-steps">
+                <div class="step-row">
+                    <div class="step-num">1</div>
+                    <div class="step-text">
+                        <h3>Daftar Akun Broker</h3>
+                        <p>Wajib membuat akun trading melalui tombol pendaftaran resmi kami di bawah.</p>
+                    </div>
+                </div>
+                <div class="step-row">
+                    <div class="step-num">2</div>
+                    <div class="step-text">
+                        <h3>Lakukan Deposit</h3>
+                        <p>Lakukan deposit awal ke akun broker Anda sesuai dengan ketentuan yang berlaku.</p>
+                    </div>
+                </div>
+                <div class="step-row">
+                    <div class="step-num">3</div>
+                    <div class="step-text">
+                        <h3>Konfirmasi WhatsApp</h3>
+                        <p>Simpan bukti pendaftaran/deposit, kembali ke halaman utama, dan kirimkan ke WhatsApp Admin.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vvip-actions">
+                <a href="https://portal.tmgm.com/register?rf_code=RF1786261868" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                    DAFTAR BROKER SEKARANG
+                </a>
+                <a href="index.html" class="btn btn-secondary">
+                    KEMBALI KE HALAMAN UTAMA
+                </a>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <span>© 2026 VALL.44. All rights reserved.</span>
+            <span>PREMIUM TRADING ACCESS PLATFORM</span>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
